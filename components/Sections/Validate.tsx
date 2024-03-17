@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ValidationTables from "../Tables/ValidationTables";
-
-type tableTypes = "member" | "space" | "collection" | "token";
+import { tableTypes } from "@/utils/types";
 
 const Validate = () => {
   const [tableType, setTableType] = useState<tableTypes>("member");
@@ -26,13 +25,13 @@ const Validate = () => {
       </div>
 
       {tableType == "collection" ? (
-        <ValidationTables url="/getKycStatusOfCollection" />
+        <ValidationTables url="/getKycStatusOfCollection" type="collection" />
       ) : tableType == "member" ? (
-        <ValidationTables url="/getKycStatusOfMember" />
+        <ValidationTables url="/getKycStatusOfMember" type="member" />
       ) : tableType == "space" ? (
-        <ValidationTables url="/getKycStatusOfToken" />
+        <ValidationTables url="/getKycStatusOfSpace" type="space" />
       ) : (
-        <ValidationTables url="/getKycStatusOfSpace" />
+        <ValidationTables url="/getKycStatusOfToken"  type="token" />
       )}
     </div>
   );

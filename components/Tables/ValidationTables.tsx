@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { BaseTable } from "./BaseTable";
 import { attributeColumns } from "./columns";
 import useApi from "@/hooks/useApi";
-import { attribute, validationResponse } from "@/utils/types";
+import { attribute, tableTypes, validationResponse } from "@/utils/types";
 import SearchInput from "../Input/SearchInput";
 import TableLoader from "../Loader.tsx/TableLoader";
 
-const ValidationTables = ({ url }: { url: string }) => {
+const ValidationTables = ({ url, type }: { url: string; type: tableTypes }) => {
   const [query, setQuery] = useState("test");
   const [value, setValue] = useState("test");
-  const { data, isLoading } = useApi<validationResponse>({
+  const { data, isLoading, isSuccess } = useApi<validationResponse>({
     url: `${url}?id=${query}`,
   });
 
@@ -28,8 +28,16 @@ const ValidationTables = ({ url }: { url: string }) => {
           Validate
         </button>
       </div>
+      {isSuccess && !isLoading ? (
+        <p className=" text-gray-500 text-sm mb-2">
+          {data?.isVerified
+            ? `This ${type} is verified`
+            : `This ${type} has not yet been verified`}
+        </p>
+      ) : null}
+
       {isLoading ? (
-        <TableLoader/>
+        <TableLoader />
       ) : (
         <BaseTable columns={attributeColumns} data={attributes} />
       )}

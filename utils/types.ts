@@ -29,3 +29,6 @@ export interface validationResponse {
   isVerified: boolean;
   attributes: attribute[];
 }
+
+export type tableTypes = "member" | "space" | "collection" | "token";
+
