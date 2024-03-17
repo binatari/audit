@@ -2,10 +2,10 @@ import BgVideo from "@/components/BgVideo";
 import TextTransition, { presets } from "react-text-transition";
 import React from "react";
 const TEXTS = [
-  "No credit check",
-  "Zero fees",
-  "Free wires",
-  "Unlimited rewards",
+  "Member KYC",
+  "Token KYC",
+  "Colletion Status",
+  "Space KYC",
 ];
 
 const Hero = () => {
@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="container mx-auto py-[318px] bg-transparent z-20 relative">
         <h1 className="font-medium rubik text-[45px] leading-[60px] md:text-[95px] md:leading-[104px] text-clips switching-text">
           <span className="text-[35px] leading-[50px] md:text-[59px]  md:leading-[80px] font-medium block text-clips small-header">
-            Business banking with
+           Validate 
           </span>
           <TextTransition
             springConfig={presets.gentle}
@@ -34,10 +34,10 @@ const Hero = () => {
           </TextTransition>
         </h1>
         <p className="my-6 text-lg text-clips description-text">
-          Thousands of entrepreneurs bank on Winden to start or grow their
-          business. Open an account in under 3 minutes.
+          Thousands of entrepreneurs use the AuditOne validation portal to verify information in a flash.
         </p>
-        <button className="flex gap-[30px] bg-[#6936F5] text-white py-4 px-8 text-[15px] font-medium ">
+        <a href="#validate">
+        <button className="flex gap-[30px] bg-[#05b8fe] text-white py-4 px-8 text-[15px] font-medium ">
           Get Started
           <svg
             width="24"
@@ -60,6 +60,7 @@ const Hero = () => {
           </svg>
           <img />
         </button>
+        </a>
         <div className="flex space-x-3 items-center mt-6 ">
           <img src="/images/sign-up-icon.png" />
           <span className="text-sm description-text text-clips">

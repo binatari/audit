@@ -9,7 +9,7 @@ const SearchInput = (
   return (
     <input
       {...props}
-      className="focus-visible:outline-none py-2 focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed  px-2 disabled:opacity-50"
+      className="focus-visible:outline-none border-[#05b8fe] border py-2 focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed  px-2 disabled:opacity-50"
     />
   );
 };

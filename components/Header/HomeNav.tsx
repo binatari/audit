@@ -60,8 +60,8 @@ const HomeNav = () => {
                 </svg>
               </button>
             </div>
-            <button className="text-sm text-white py-2 px-5">Log In</button>
-            <button className="text-sm text-white bg-white bg-opacity-[0.05] border border-[#FFFFFF0D] py-2 px-5">
+            <button className="text-sm text-white py-2 px-5 hidden md:block">Log In</button>
+            <button className="text-sm hidden md:block text-white bg-white bg-opacity-[0.05] border border-[#FFFFFF0D] py-2 px-5">
               Sign Up
             </button>
           </div>

@@ -1,5 +1,6 @@
 import { componentWithChildren } from '@/utils/types'
 import HomeNav from '../Header/HomeNav'
+import Footer from '../Footer/Footer'
 
 export default function Layout({ children }:componentWithChildren) {
     return (
@@ -8,7 +9,7 @@ export default function Layout({ children }:componentWithChildren) {
             <div className='pb-20'>
             {children}
             </div>
-         
+            <Footer/>
         </main>
     )
 }

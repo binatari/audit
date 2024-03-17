@@ -34,6 +34,7 @@ const useApi = <B>({
       .catch((err)=>{
         console.log(err)
         setIsSuccess(false)
+        setData(undefined)
         if(onError) onError()
       })
       .finally(() => setIsloading(false));

@@ -36,7 +36,7 @@ export const attributeColumns: ColumnDef<attribute>[] = [
       return (
         <a
           href={cell.row.original.link.url}
-          className="flex gap-[4px] bg-[#6936F5] text-white py-2 px-4 text-[15px] font-medium "
+          className="flex gap-[4px] bg-[#05b8fe] text-white py-2 px-4 text-[15px] font-medium "
         >
           Link
           <svg
